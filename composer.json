@@ -1,6 +1,10 @@
 {
     "name": "olegkishko/tt_memc",
     "description": "Test task: implementation the library for Memcached",
+    "type": "library",
+    "keywords": [
+        "memcached"
+    ],
     "authors": [
         {
             "name": "Oleg Kishko",

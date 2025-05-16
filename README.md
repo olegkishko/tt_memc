@@ -1,7 +1,5 @@
 # tt_memc
 
-[![Build Status](https://app.travis-ci.com/olegkishko/tt_memc.svg?token=rzWScp6CmuGjXTuUz96W&branch=master)](https://app.travis-ci.com/olegkishko/tt_memc)
-
 
 Test task: implementation of a library for Memcached
 

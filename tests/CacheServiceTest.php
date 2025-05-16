@@ -1,6 +1,8 @@
 <?php
 
-namespace tt_memcTest;
+declare(strict_types=1);
+
+namespace tt_memc\Tests;
 
 use PHPUnit\Framework\TestCase;
 use tt_memc\CacheService;
@@ -9,22 +11,19 @@ use tt_memc\Driver\InMemoryDriver;
 
 class CacheServiceTest extends TestCase
 {
-    /**
-     * @var CacheServiceInterface
-     */
-    private $service;
+    private CacheServiceInterface $service;
     
-    public function setUp()
+    public function setUp(): void
     {
         $this->service = new CacheService(new InMemoryDriver());
     }
     
-    public function testCanSetValueByKey()
+    public function testCanSetValueByKey(): void
     {
         $this->assertTrue($this->service->set('key', 'data'));
     }
     
-    public function testCanGetValueByKey()
+    public function testCanGetValueByKey(): void
     {
         // int
         $this->service->set($key = 'int', $data = 100);
@@ -50,7 +49,7 @@ class CacheServiceTest extends TestCase
         $this->assertNull($this->service->get('unknown'));
     }
     
-    public function testCanDeleteValueByKey()
+    public function testCanDeleteValueByKey(): void
     {
         $this->service->set($key = 'key', $data = 'data');
         
